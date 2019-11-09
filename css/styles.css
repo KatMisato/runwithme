@@ -8,15 +8,24 @@
   border-bottom: 1px ridge;
   min-height: 400px; }
 
+.card {
+  width: 100%; }
+
+.iframe-map {
+  width: 100%;
+  height: auto;
+  min-height: 350px;
+  border: 0; }
+
 .footer {
-  background-color: #D1C4E9;
+  background-color: #fbc02d;
   margin: 0px auto;
   padding: 20px 0px; }
 
 .jumbotron {
   margin: 0px auto;
   padding: 70px 30px;
-  background: #9575CD;
+  background: #fbc02d;
   color: floralwhite; }
 
 address {
@@ -34,29 +43,70 @@ body {
   border-bottom: 1px solid #ddd;
   padding: 10px; }
 
-.carousel {
-  background: #512DA8; }
-  .carousel .carousel-item {
-    height: 300px; }
-    .carousel .carousel-item img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      min-height: 300px; }
+.navbar-light {
+  background-color: #c49000; }
 
-#carouselButton {
-  right: 0px;
-  position: absolute;
-  bottom: 0px;
-  z-index: 1; }
+.navbar-nav .nav-item .nav-link {
+  color: black !important; }
+  .navbar-nav .nav-item .nav-link:hover {
+    color: #ffdd4b !important; }
 
-.modal-header {
-  background-color: #512DA8;
-  color: floralwhite; }
-  .modal-header button.close {
-    color: floralwhite; }
-    .modal-header button.close:hover {
-      color: white; }
+.modal .modal-header {
+  background-color: #fbc02d;
+  color: black; }
+  .modal .modal-header button.close {
+    color: black; }
+    .modal .modal-header button.close:hover {
+      color: #c49000; }
 
-.modal-body {
-  background-color: #D1C4E9; }
+.modal .modal-body {
+  background-color: #ffdd4b; }
+
+.card {
+  background: #ffdd4b; }
+  .card .card-header {
+    background-color: #fbc02d;
+    color: black; }
+  .card .card-header h3:first-of-type {
+    float: left; }
+  .card .card-header h3:last-of-type {
+    float: right; }
+
+.card-chat {
+  background-color: #ffdd4b;
+  border: 0;
+  margin: 0;
+  padding: 0; }
+  .card-chat .card-header {
+    background-color: #fbc02d;
+    color: black; }
+  .card-chat .card-body {
+    background-color: #ffdd4b; }
+  .card-chat .list-group-item {
+    background-color: #ffdd4b; }
+
+.card-chat-text {
+  background: white;
+  border: 0;
+  margin-bottom: 10px; }
+  .card-chat-text .card-header {
+    background-color: #fbc02d;
+    color: black; }
+  .card-chat-text .card-body {
+    background-color: white;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0; }
+  .card-chat-text .list-group-item {
+    background-color: #ffdd4b; }
+
+.btn-black-text {
+  color: black !important; }
+
+.btn-navbar {
+  color: black; }
+  .btn-navbar:hover {
+    color: #ffdd4b; }
+
+.div-black-text {
+  color: black !important; }

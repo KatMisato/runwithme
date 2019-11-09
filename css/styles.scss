@@ -1,13 +1,13 @@
 $lt-gray: #ddd;
-$background-dark: #512DA8;
-$background-light: #9575CD;
-$background-pale: #D1C4E9;
+$background-dark: #c49000;
+$background-light: #fbc02d;
+$background-pale: #ffdd4b;
 
 // Height variables
 $carousel-item-height: 300px;
 
 @mixin zero-margin($pad-up-dn, $pad-left-right) {
-  margin:0px auto;
+  margin: 0px auto;
   padding: $pad-up-dn $pad-left-right;
 }
 
@@ -18,36 +18,54 @@ $carousel-item-height: 300px;
   }
 }
 
-.row-header{
-  @include zero-margin(0px,0px);
+@mixin navlink($color-button, $hover) {
+  color: $color-button !important;
+  &:hover {
+    color: $hover !important;
+  }
+}
+
+.row-header {
+  @include zero-margin(0px, 0px);
 }
 
 .row-content {
-  @include zero-margin(50px,0px);
+  @include zero-margin(50px, 0px);
   border-bottom: 1px ridge;
-  min-height:400px;
+  min-height: 400px;
 }
 
-.footer{
-  background-color: $background-pale;
+.card {
+  width: 100%
+}
+
+.iframe-map {
+  width: 100%;
+  height: auto;
+  min-height: 350px;
+  border: 0
+}
+
+.footer {
+  background-color: $background-light;
   @include zero-margin(20px, 0px);
 }
 
 .jumbotron {
-  @include zero-margin(70px,30px);
-  background: $background-light ;
-  color:floralwhite;
+  @include zero-margin(70px, 30px);
+  background: $background-light;
+  color: floralwhite;
 }
 
-address{
-  font-size:80%;
-  margin:0px;
-  color:#0f0f0f;
+address {
+  font-size: 80%;
+  margin: 0px;
+  color: #0f0f0f;
 }
 
-body{
-  padding:50px 0px 0px 0px;
-  z-index:0;
+body {
+  padding: 50px 0px 0px 0px;
+  z-index: 0;
 }
 
 .tab-content {
@@ -57,36 +75,102 @@ body{
   padding: 10px;
 }
 
-.carousel {
-  background:$background-dark;
+.navbar-light {
+  background-color: $background-dark;
+}
 
-  .carousel-item {
-    height: $carousel-item-height;
-    img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      min-height: 300px;
+.navbar-nav {
+  .nav-item {
+    .nav-link {
+      @include navlink(black, $background-pale);
     }
   }
 }
 
-#carouselButton {
-  right:0px;
-  position: absolute;
-  bottom: 0px;
-  z-index: 1;
-}
+.modal {
+  .modal-header {
+    background-color: $background-light;
+    color: black;
 
-.modal-header {
-  background-color: $background-dark;
-  color:floralwhite;
+    button.close {
+      @include close-button(black, $background-dark);
+    }
+  }
 
-  button.close{
-    @include close-button(floralwhite, white);
+  .modal-body {
+    background-color: $background-pale;
   }
 }
 
-.modal-body {
+.card {
+  .card-header {
+    background-color: $background-light;
+    color: black;
+  }
+
+  .card-header h3:first-of-type {
+    float: left;
+  }
+
+  .card-header h3:last-of-type {
+    float: right;
+  }
+
+  background: $background-pale;
+}
+
+.card-chat {
   background-color: $background-pale;
+
+  .card-header {
+    background-color: $background-light;
+    color: black;
+  }
+
+  .card-body {
+    background-color: $background-pale;
+  }
+
+  .list-group-item {
+    background-color: $background-pale;
+  }
+
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.card-chat-text {
+  background: white;
+
+  .card-header {
+    background-color: $background-light;
+    color: black;
+  }
+
+  .card-body {
+    background-color: white;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .list-group-item {
+    background-color: $background-pale;
+  }
+
+  border: 0;
+  margin-bottom: 10px;
+}
+
+.btn-black-text {
+  color: black !important;
+}
+
+.btn-navbar {
+  @include close-button(black, $background-pale);
+}
+
+.div-black-text {
+  color: black !important;
 }

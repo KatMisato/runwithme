@@ -1,23 +1,11 @@
-$("#carouselButton").click(function () {
-    if ($("#carouselButton").children("span").hasClass('fa-pause')) {
-        $("#mycarousel").carousel('pause');
-        $("#carouselButton").children("span").removeClass('fa-pause');
-        $("#carouselButton").children("span").addClass('fa-play');
-    }
-    else if ($("#carouselButton").children("span").hasClass('fa-play')) {
-        $("#mycarousel").carousel('cycle');
-        $("#carouselButton").children("span").removeClass('fa-play');
-        $("#carouselButton").children("span").addClass('fa-pause');
-    }
+$("#createRouteButton").click(function () {
+    $("#createRouteModal").modal('toggle');
 });
-$("#reserveButton").click(function () {
-    $("#reserveModal").modal('toggle');
+$("#closeRouteButton").click(function () {
+    $("#createRouteModal").modal('hide')
 });
-$("#closeReserve").click(function () {
-    $("#reserveModal").modal('hide')
-});
-$("#cancelReserve").click(function () {
-    $("#reserveModal").modal('hide')
+$("#cancelRouteButton").click(function () {
+    $("#createRouteModal").modal('hide')
 });
 $("#loginButton").click(function () {
     $("#loginModal").modal('toggle');
@@ -28,3 +16,6 @@ $("#closeLogin").click(function () {
 $("#cancelLogin").click(function () {
     $("#loginModal").modal('hide')
 });
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})

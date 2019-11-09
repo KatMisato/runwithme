@@ -2,7 +2,7 @@ call npm install
 call npm install lite-server --save-dev
 call npm install bootstrap@4.0.0 --save
 call npm install jquery@3.3.1 popper.js@1.12.9 --save
-call npm install font-awesome --save
+call npm install @fortawesome/fontawesome-free --save
 call npm install bootstrap-social@5.1.1 --save
 call npm install --save-dev onchange@3.3.0 parallelshell@3.0.2
 call npm install --save-dev rimraf@2.6.2

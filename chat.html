@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- build:css css/main.css -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="node_modules/mdbootstrap/css/mdb.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- endbuild -->
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+    <title>RunWithMe</title>
+</head>
+<body>
+<!--Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light lighten-5">
+    <a class="navbar-brand" href="#">
+        <img src="img/logo.png" height="30" alt="runwithme logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
+            aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
+        <form class="form-inline my-0 my-lg-0 ml-0 col-12 col-sm-8 p-0">
+            <input class="form-control col-7 col-sm-4" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-gray btn-navbar btn-md my-2 my-sm-0 ml-3 col-4 col-sm-auto" type="submit">
+                Search
+            </button>
+        </form>
+        <div class="ml-auto mr-0">
+            <ul class="navbar-nav nav-flex-icons">
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Chat</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Friends</a>
+                </li>
+                <li class="nav-item avatar">
+                    <a class="nav-link fas fa-user-circle fa-2x" id="loginButton"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--/.Navbar -->
+<div id="loginModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg" role="content">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Login </h4>
+                <button class="close" id="closeLogin">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-sm-4">
+                            <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                            <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3"
+                                   placeholder="Enter email">
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <label class="sr-only" for="exampleInputPassword3">Password</label>
+                            <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3"
+                                   placeholder="Password">
+                        </div>
+                        <div class="col-sm-auto">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox">
+                                <label class="form-check-label"> Remember me
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <button type="button" class="btn btn-light waves-effect btn-sm ml-auto" id="cancelLogin">Cancel
+                        </button>
+                        <button type="submit" class="btn btn-primary waves-effect btn-sm ml-1">Sign in</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="card card-chat col-sm-3">
+            <div class="card card-chat">
+                <div class="card-header">
+                    Chat rooms
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">New birthday party</li>
+                    <li class="list-group-item"><b>Our first route</b></li>
+                    <li class="list-group-item">How to recompile Linux kernel</li>
+                </ul>
+            </div>
+            <div class="card card-chat">
+                <div class="card-header">
+                    Private rooms
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Alistar</li>
+                    <li class="list-group-item">Daniella</li>
+                    <li class="list-group-item">Lucy</li>
+                    <li class="list-group-item">Yan</li>
+                    <li class="list-group-item">Franko</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card card-chat col-sm-9">
+            <div class="card-body">
+                <div class="card card-chat-text col-sm-7">
+                    <div class="row card-body">
+                        <div class="col col-sm-1 ml-0">
+                            <a class="fa fa-user-circle fa-2x float-left" data-toggle="tooltip" title="Yan"></a>
+                        </div>
+                        <div class="col col-sm-11">
+                            <span class="float-left"><b>Yan</b></span>
+                            <span class="float-right">11:22</span><br>
+                            <span class="float-left">It was perfect run in awesome place, thank's for all</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-chat-text col-sm-7">
+                    <div class="row card-body">
+                        <div class="col col-sm-1 ml-0">
+                            <a class="fa fa-user-circle fa-2x float-left" data-toggle="tooltip" title="Alister"></a>
+                        </div>
+                        <div class="col col-sm-11">
+                            <span class="float-left"><b>Alister</b></span>
+                            <span class="float-right">11:25</span><br>
+                            <span class="float-left">Yes, I agree, need to repeat</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-chat-text col-sm-7 float-right">
+                    <div class="row card-body">
+                        <div class="col col-sm-1 ml-0">
+                            <a class="fa fa-user-circle fa-2x float-left" data-toggle="tooltip" title="You"></a>
+                        </div>
+                        <div class="col col-sm-11">
+                            <span class="float-left"><b>You</b></span>
+                            <span class="float-right">11:25</span><br>
+                            <span class="float-left">Yes! May be, repeat in next Sunday?</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container justify-content-center">
+        <div class="row justify-content-center">
+            <p>© Copyright 2019 RunWithMe</p>
+        </div>
+    </div>
+</footer>
+<!-- build:js js/main.js -->
+<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="js/scripts.js"></script>
+<!-- endbuild -->
+</body>
+
+</html>

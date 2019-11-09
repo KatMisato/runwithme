@@ -57,8 +57,8 @@ module.exports = function (grunt) {
                         //for font-awesome
                         expand: true,
                         dot: true,
-                        cwd: 'node_modules/font-awesome',
-                        src: ['fonts/*.*'],
+                        cwd: 'node_modules/@fortawesome/fontawesome-free',
+                        src: ['webfonts/*.*'],
                         dest: 'dist'
                     }]
             }
@@ -83,7 +83,7 @@ module.exports = function (grunt) {
         useminPrepare: {
             foo: {
                 dest: 'dist',
-                src: ['contactus.html','aboutus.html','index.html']
+                src: ['chat.html','index.html']
             },
             options: {
                 flow: {
@@ -151,7 +151,7 @@ module.exports = function (grunt) {
         // options.assetDirs contains the directories for finding the assets
         // according to their relative paths
         usemin: {
-            html: ['dist/contactus.html','dist/aboutus.html','dist/index.html'],
+            html: ['dist/chat.html','dist/index.html'],
             options: {
                 assetsDirs: ['dist', 'dist/css','dist/js']
             }
@@ -164,8 +164,7 @@ module.exports = function (grunt) {
                 },
                 files: {                                   // Dictionary of files
                     'dist/index.html': 'dist/index.html',  // 'destination': 'source'
-                    'dist/contactus.html': 'dist/contactus.html',
-                    'dist/aboutus.html': 'dist/aboutus.html',
+                    'dist/chat.html': 'dist/chat.html'
                 }
             }
         }
